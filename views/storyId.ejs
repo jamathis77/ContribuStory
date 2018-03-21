@@ -1,0 +1,41 @@
+<% include partials/header %>
+
+<body class="body-storyId">
+
+<header>
+  <div class="story-id-grid">
+
+    <h1 class="story-id-h1">Contribustory</h1>
+    <button class="story-id-logout-button"><a href="/logout">Logout</a></button>
+    <button class="return-stories-button"><a href="/stories">Back to Stories</a></button>
+
+  </div>
+
+</header>
+
+<div class="grid-storyId">
+
+      <div class="author-text">Written By</div>
+      <!-- <div class="authors-list"></div> -->
+      <div class="storyInput">
+        <form class="storyInput story-form" action="/story/<%= storyID %>" method="post">
+          <label for="userStory"></label>
+          <!-- <input class="storyInput story-userInput" id="userStory" type="text" name="content" value=""> -->
+          <textarea class="storyInput story-userInput" id="userStory" type="text" name="content" rows="20" cols="81"></textarea>
+          <button class"add-story-button">Submit</button>
+        </form>
+      </div>
+
+
+</div>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript" src="/index.js"></script>
+</body>
+
+<% include partials/footer %>

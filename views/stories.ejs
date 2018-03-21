@@ -1,0 +1,50 @@
+<% include partials/header %>
+
+<body class="body-stories">
+
+<header>
+  <div class="stories-header-grid">
+
+    <h1 class="stories-h1">Stories</h1>
+
+    <div class="stories-user">
+      <h2 class="stories-username">Hello <%= username %></h2>
+      <button class="logout-button"><a href="/logout">Logout</a></button>
+      <button class="remove-user-button" type="button" name="button"></button>
+    </div>
+
+  </div>
+
+</header>
+
+    <nav role="navigation">
+      <p class="create-story">Create a New Story</p>
+      <form id="js-form-create-story" class="form-create-story" action="http://localhost:8080/stories" method="post">
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title">
+
+        <!-- <label for="content">Content</label>
+        <input id="content" type="text" name="content"> -->
+
+        <input type="submit">
+      </form>
+    </nav>
+
+    <nav class="story-append" role="navigation">
+      <ul id="js-story-list">
+
+      </ul>
+    </nav>
+
+
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript" src="/index.js"></script>
+</body>
+
+<% include partials/footer %>

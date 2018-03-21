@@ -1,5 +1,43 @@
-<h1>This is the home page</h1>
+<% include partials/header %>
 
-<li><a href="/register">Sign Up</a></li>
-<li><a href="/login">Login</a></li>
-<li><a href="/logout">Logout</a></li>
+<body class="body-home">
+
+<h1 class="home siteTitle">ContribuStory</h1>
+
+<div class="intro-div">
+
+  <p class="intro">To login use the username: username and the password: password. After signing in you will be at the stories page where you can pick a story that you would like to add to, or create a new story. Click on a story and then type in your contribution</p>
+
+</div>
+
+
+<div class="home-box">
+  <h1 class="home-h1">Welcome</h1>
+  <!-- <input type="submit" class="button register" value="Sign Up"><a href="/register"></a></input>
+  <input type="submit" class="button login" value="Login"><a href="/login"></a></input> -->
+
+  <button class="button register"><a href="/register">Sign Up</a></button>
+  <button class="button login"><a href="/login">Login</a></button>
+</div>
+
+
+<!-- <div class="grid-homepage">
+  <p class="paragraph registration">If you're new to site click here to register!</p>
+
+  <p class="paragraph log">If you're already a member click here to log in!</p>
+
+  <button class="button register" ><a href="/register">Sign Up</a></button>
+  <button class="button login"><a href="/login">Login</a></button>
+</div> -->
+
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript" src="/index.js"></script>
+</body>
+
+<% include partials/footer %>

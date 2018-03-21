@@ -1,13 +1,41 @@
-<h1>Sign Up Form</h1>
+<% include partials/header %>
 
-<form action="/register" method="POST">
-  <input type="text" name="username" placeholder="username">
-  <input type="text" name="password" placeholder="password">
-  <button>Submit</button>
+<body class="body-register">
 
-</form>
 
-<li><a href="/logout">Logout</a></li>
+
+<div class="login-box">
+
+  <h1 class="register-h1">Register</h1>
+
+  <form action="/register" method="POST">
+    <!-- <label for="">Please create a username</label> -->
+    <p class="username-p">Register a username</p>
+    <input class="register-page-input" type="text" name="username" placeholder="username">
+
+    <!-- <label for="">Please create a password</label> -->
+    <p>Create a Password</p>
+    <input class="register-page-input" type="password" name="password" placeholder="password">
+
+    <div class="button-center">
+      <input class="register-page-button" type="submit"></input>
+    </div>
+
+
+  </form>
+</div>
+
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript" src="/index.js"></script>
+</body>
+
+<% include partials/footer %>
 
 <!-- <form class="js-login-form" name="" action="http://localhost:8080" method="post">
     <label for="username">login</label>

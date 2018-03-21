@@ -1,0 +1,432 @@
+/* font kind of like a typewriter */
+/* font-family: 'IM Fell Double Pica SC', serif; */
+
+/* @import "normalize.css"; */
+
+@font-face {
+  font-family: "sears-tower";
+  src: url(fonts/Sears_Tower.ttf);
+}
+
+@font-face {
+  font-family: "moms-typewriter";
+  src: url(fonts/Moms_typewriter.ttf);
+}
+
+@font-face {
+  font-family: "nineteen-forty-two";
+  src: url(fonts/1942.ttf);
+}
+
+@font-face {
+  font-family: "hammer";
+  src: url(fonts/HAMMK.ttf);
+}
+
+@font-face {
+  font-family: "veteran";
+  src: url(fonts/veteran_typewriter.ttf);
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.body-home {
+  background-image: url("pen-write.jpg");
+  /* background-size: 85%;
+  background-repeat: repeat; */
+  background-size: 100%;
+}
+
+h1, p, h2 {
+  margin: 0px;
+}
+
+.home-box {
+  width: 320px;
+  height: 420px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  top: 50%;
+  left: 80%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+
+.home-h1 {
+  margin: 0;
+  /* padding: 0 0 20px; */
+  text-align: center;
+  font-size: 42px;
+  font-family: moms-typewriter;
+  color: black;
+}
+
+.body-login, .body-register {
+  background-image: url("typewriter-desk.jpg");
+  background-size: cover;
+}
+
+.login-box {
+  width: 320px;
+  height: 420px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+
+.login-h1, .register-h1 {
+  margin: 0;
+  /* padding: 0 0 20px; */
+  text-align: center;
+  font-size: 42px;
+  font-family: moms-typewriter;
+  color: black;
+  background: linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(32,124,202,0.71) 32%,rgba(32,124,202,0.89) 40%,rgba(34,127,205,1) 45%,rgba(38,132,211,1) 54%,rgba(41,137,216,0.8) 63%,rgba(125,185,232,0) 100%);
+
+  /* background-color: #2c9bd3; */
+}
+
+.login-box p {
+  margin: 0;
+  /* padding: 0; */
+  font-weight: bold;
+  font-size: 20px;
+  font-family: moms-typewriter;
+  color: black;
+  text-align: center;
+}
+
+.username-p {
+  padding-top: 20px;
+}
+
+.login-page-input, .register-page-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"], input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+}
+
+.login-page-button, .register-page-button {
+  background: #0090d8;
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.siteTitle {
+  font-family: sears-tower;
+  font-size: 5em;
+  text-align: center;
+  background: linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(209,209,209,1) 49%,rgba(125,185,232,0) 100%);
+}
+
+.intro-div {
+  width: 40%;
+  margin-top: 14%;
+
+}
+
+.intro {
+  font-size: 1.5em;
+
+}
+
+.button {
+
+  background: #0090d8;
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 80%;
+  margin-top: 15%;
+
+}
+
+.button a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.button a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* register paragraph */
+.registration {
+  grid-column: 9/12;
+  grid-row: 2/3;
+  font-size: 1.5em;
+}
+
+/* register button */
+.register {
+  grid-column: 9/12;
+  grid-row: 3/4;
+}
+
+/* login paragraph */
+.log {
+  grid-column: 2/5;
+  grid-row: 2/3;
+  font-size: 1.5em;
+}
+
+/* login button */
+.login {
+  grid-column: 2/5;
+  grid-row: 3/4;
+}
+
+.grid-homepage {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto))
+}
+
+
+.gridBox {
+  background-color: white;
+}
+
+.login-page-paragraph {
+  font-size: 1.5em;
+  padding-bottom: 5px;
+}
+
+/* STORIES page */
+
+.stories-header-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.body-stories {
+  background-image: url("paper-sheets.jpg");
+  background-size: cover;
+}
+
+.create-story {
+  font-family: moms-typewriter;
+  
+}
+
+.stories-h1 {
+  font-family: moms-typewriter;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 10px;
+  grid-column: 2/3;
+}
+
+.stories-page-li {
+  list-style-type: none;
+  text-align: center;
+  font-family: moms-typewriter;
+  font-size: 1.8em;
+  padding-bottom: 3px;
+}
+
+.stories-page-li a:link, .stories-page-li a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.stories-page-li a:hover {
+  color: red;
+}
+
+.stories-user {
+  margin-left: auto;
+  margin-right: 20%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.stories-username {
+  font-family: moms-typewriter;
+  margin-bottom: 5px;
+}
+
+.logout-button {
+grid-column: 3/4;
+/* margin-left: auto;
+margin-right: 20%;
+margin-top: auto;
+margin-bottom: auto; */
+background: #0090d8;
+border: none;
+outline: none;
+height: 40px;
+color: #fff;
+font-size: 18px;
+border-radius: 20px;
+font-family: moms-typewriter;
+margin-left: 25%;
+}
+
+.logout-button a:link, .logout-button a:visited {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+/* STORY ID page style */
+
+.body-storyId {
+  background-image: url("lined-paper-texture.jpg");
+  background-size: 85%;
+  background-repeat: repeat;
+}
+
+.story-id-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.story-id-h1 {
+  font-family: moms-typewriter;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 20px;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.return-stories-button a:link, .return-stories-button a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.return-stories-button {
+  grid-column: 1/2;
+  background: #0090d8;
+  border: none;
+  outline: none;
+  height: 50px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 30px;
+  font-family: moms-typewriter;
+  width: 30%;
+  margin-left: 20%;
+  grid-row: 1/2;
+  margin-top: 25px;
+  margin-bottom: auto;
+}
+
+.story-id-logout-button {
+grid-column: 3/4;
+margin-left: auto;
+margin-right: 20%;
+background: #0090d8;
+border: none;
+outline: none;
+height: 50px;
+color: #fff;
+font-size: 12px;
+border-radius: 30px;
+font-family: moms-typewriter;
+width: 30%;
+margin-top: 25px;
+margin-bottom: auto;
+}
+
+.story-id-logout-button a:link, .story-id-logout-button a:visited {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+
+.grid-storyId {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(7, minmax(100px, auto))
+}
+
+.contribustory-text {
+  grid-column: 1/8;
+  background-color: red;
+}
+
+.author-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  font-family: moms-typewriter;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  border-bottom: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.authors-list {
+  grid-column: 1/3;
+  grid-row: 3/6;
+  font-family: moms-typewriter;
+  margin-left: 20%;
+  font-size: 1.5em;
+}
+
+.title {
+  grid-column: 4/14;
+  grid-row: 2/3;
+  font-family: moms-typewriter;
+  font-size: 2em;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.story {
+  grid-column: 4/9;
+  grid-row: 3/6;
+  background-image: url("parchment-tile.jpg");
+  font-family: moms-typewriter;
+  font-size: .9em;
+}
+
+.storyInput {
+  grid-column: 9/14;
+  grid-row: 3/6;
+  background-image: url("parchment-tile.jpg");
+  width: 100%;
+  font-family: moms-typewriter;
+}
