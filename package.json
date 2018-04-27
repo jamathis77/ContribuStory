@@ -7,7 +7,8 @@
   },
   "main": "app.js",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "start": "node app.js"
   },
   "author": "Jacob Mathis",
   "license": "ISC",
