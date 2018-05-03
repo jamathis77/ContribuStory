@@ -72,7 +72,7 @@ app.post('/stories', (req, res) => {
       // content: req.body.content,
       // authors: req.body.authors
     })
-    .then(story => res.status(201).redirect('stories'))
+    .then(story => res.status(201).redirect('/stories'))
     .catch(err => {
       console.error(err)
       res.status(500).json({message: 'Internal server error'})
