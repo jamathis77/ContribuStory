@@ -1,7 +1,6 @@
 console.log('index.js is connected')
 
-
-function getStoryData(callback){
+function getStoryData (callback) {
   const settings = {
     url: '/storiesDB',
     dataType: 'json',
@@ -9,11 +8,11 @@ function getStoryData(callback){
     success: callback
   }
   console.log('get ajax ran')
-  $.ajax(settings);
+  $.ajax(settings)
 };
 
-function postStoryData(callback){
-  let storyID = (window.location.pathname).slice(7);
+function postStoryData (callback) {
+  let storyID = (window.location.pathname).slice(7)
   console.log(`ajax post storyID: ${storyID}`)
   const settings = {
     url: `/story/${storyID}`,
@@ -22,10 +21,10 @@ function postStoryData(callback){
     success: callback
   }
   console.log('post to storyDB ajax ran')
-  $.ajax(settings);
+  $.ajax(settings)
 }
 
-function deleteUser(callback){
+function deleteUser (callback) {
   const settings = {
     url: '/stories/delete',
     dataType: 'json',
@@ -35,33 +34,33 @@ function deleteUser(callback){
   $.ajax(settings);
 }
 
-function storiesCallback(response){
-  console.log(`storyData ajax callback`);
-  response.stories.forEach(function(story){
-    $('#js-story-list').append(`<li class="stories-page-li"><a href="http://localhost:8080/story/${story.id}">${story.title}</a></li>`)
-  });
+function storiesCallback (response) {
+  console.log(`storyData ajax callback`)
+  response.stories.forEach(function (story) {
+    $('#js-story-list').append(`<li class="stories-page-li"><a href="/story/${story.id}">${story.title}</a></li>`)
+  })
 };
 
-function storyIdCallback(response){
-  let requestID = (window.location.pathname).slice(7);
+function storyIdCallback (response) {
+  let requestID = (window.location.pathname).slice(7)
 
-  console.log(`req id from window pathname: ${requestID}`);
-  console.log(response);
+  console.log(`req id from window pathname: ${requestID}`)
+  console.log(response)
 
-  response.stories.forEach(function(story){
-    if(requestID === story.id){
-      let authors = story.authors;
+  response.stories.forEach(function (story) {
+    if (requestID === story.id) {
+      let authors = story.authors
       console.log(`the authors are: ${authors}`)
-      $('.grid-storyId').append(`<div class="authors-list">${story.authors}</div>`);
+      $('.grid-storyId').append(`<div class="authors-list">${story.authors}</div>`)
       // $('.authors-list').textContent = `${story.authors}`;
-      $('.grid-storyId').append(`<h1 class="title">${story.title}</h1>`);
+      $('.grid-storyId').append(`<h1 class="title">${story.title}</h1>`)
       $('.grid-storyId').append(`<div class="story">${story.content}</div>`)
     }
-  });
+  })
 };
 
-function deleteUserCallback(response){
-  alert(`Your user has been deleted`)
+function deleteUserCallback (response) {
+  alert (`Your user has been deleted`)
 }
 
 // $('.add-story-button').on('click', (event) => {
@@ -71,17 +70,17 @@ function deleteUserCallback(response){
 // })
 
 $('.remove-user-button').on('click', (event) => {
-  event.preventDefault();
-  deleteUser(deleteUserCallback);
+  event.preventDefault()
+  deleteUser(deleteUserCallback)
 })
 
 $(document).ready
-(function() {
-  if (window.location.pathname == '/stories'){
-    console.log('stories page is up');
+(function () {
+  if (window.location.pathname == '/stories') {
+    console.log('stories page is up')
     getStoryData(storiesCallback)
   }
   if (window.location.pathname == '/story/:id')
-  console.log('story ID page is up');
+  console.log('story ID page is up')
   {getStoryData(storyIdCallback)}
 });
