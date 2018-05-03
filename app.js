@@ -68,9 +68,9 @@ app.get('/story/:id', isLoggedIn, (req, res) => {
 app.post('/stories', (req, res) => {
   Story
     .create({
-      title: req.body.title,
-      content: req.body.content,
-      authors: req.body.authors
+      title: req.body.title
+      // content: req.body.content,
+      // authors: req.body.authors
     })
     .then(story => res.status(201).redirect('stories'))
     .catch(err => {
