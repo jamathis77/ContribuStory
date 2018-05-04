@@ -2,7 +2,7 @@ console.log('index.js is connected')
 
 function getStoryData (callback) {
   const settings = {
-    url: 'https://evening-beach-80939.herokuapp.com/storiesDB',
+    url: '/storiesDB',
     dataType: 'json',
     type: 'GET',
     success: callback
@@ -15,7 +15,7 @@ function postStoryData (callback) {
   let storyID = (window.location.pathname).slice(7)
   console.log(`ajax post storyID: ${storyID}`)
   const settings = {
-    url: `https://evening-beach-80939.herokuapp.com/story/${storyID}`,
+    url: `/story/${storyID}`,
     dataType: 'json',
     type: 'POST',
     success: callback
@@ -26,7 +26,7 @@ function postStoryData (callback) {
 
 function deleteUser (callback) {
   const settings = {
-    url: 'https://evening-beach-80939.herokuapp.com/stories/delete',
+    url: '/stories/delete',
     dataType: 'json',
     type: 'delete',
     success: callback
