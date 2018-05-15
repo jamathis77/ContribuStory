@@ -69,8 +69,7 @@ function deleteUserCallback (response) {
 //   postStoryData(location.reload());
 // })
 
-$('.remove-user-button').on('click', (event) => {
-  event.preventDefault()
+$('.remove-user-button').on('click', () => {
   deleteUser(deleteUserCallback)
 })
 
