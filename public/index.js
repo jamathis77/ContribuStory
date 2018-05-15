@@ -60,7 +60,7 @@ function storyIdCallback (response) {
 };
 
 function deleteUserCallback (response) {
-  alert (`Your user has been deleted`)
+  alert(`Your user has been deleted`)
 }
 
 // $('.add-story-button').on('click', (event) => {
