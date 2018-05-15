@@ -76,11 +76,11 @@ $('.remove-user-button').on('click', (event) => {
 
 $(document).ready
 (function () {
-  if (window.location.pathname == '/stories') {
+  if (window.location.pathname === '/stories') {
     console.log('stories page is up')
     getStoryData(storiesCallback)
   }
-  if (window.location.pathname == '/story/:id')
-  console.log('story ID page is up')
-  {getStoryData(storyIdCallback)}
-});
+  if (window.location.pathname === '/story/:id')
+    console.log('story ID page is up')
+  { getStoryData(storyIdCallback) }
+})

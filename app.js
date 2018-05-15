@@ -106,7 +106,7 @@ app.delete('/stories/delete', (req, res) => {
   console.log(req.user._id)
   User.deleteOne({id: req.user._id})
     .then(user => {
-      user.save((err, user) => {
+      User.save((err, user) => {
         if (err) { res.status(500).send(err) } res.status(200).redirect(req.get('register'))
       })
     })
