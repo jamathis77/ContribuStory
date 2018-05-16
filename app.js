@@ -103,13 +103,8 @@ app.post('/story/:id', (req, res) => {
 app.delete('/stories/delete', (req, res) => {
   // let user = User.findOne({name: req.user.username});
   // let userID = user._id;
-  console.log(req.user.id)
+  console.log(`delete user id is ${req.user.id}`)
   User.deleteOne({id: req.user.id})
-    .then(user => {
-      User.save((err, user) => {
-        if (err) { res.status(500).send(err) } res.status(200).redirect(req.get('register'))
-      })
-    })
 })
 
 // AUTH ROUTES

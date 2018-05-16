@@ -25,6 +25,7 @@ function postStoryData (callback) {
 }
 
 function deleteUser (callback) {
+  console.log('deleteUser ajax ran')
   const settings = {
     url: '/stories/delete',
     dataType: 'json',
@@ -70,6 +71,7 @@ function deleteUserCallback (response) {
 // })
 
 $('.remove-user-button').on('click', () => {
+  console.log('delete user id clicked')
   deleteUser(deleteUserCallback)
 })
 
