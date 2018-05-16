@@ -103,7 +103,7 @@ app.post('/story/:id', (req, res) => {
 app.delete('/stories/delete', (req, res) => {
   // let user = User.findOne({name: req.user.username});
   // let userID = user._id;
-  console.log(`delete user id is ${req}`)
+  console.log(`delete user id is ${res}`)
   // User.deleteOne({id: req.user._id})
 })
 
